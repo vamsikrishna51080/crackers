@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>display menu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script>
+            var newwindow;
+            function poptastic(url)
+                {
+	              newwindow=window.open(url,'name','resizable=no,height=200,width=500');
+	              if (window.focus) {newwindow.focus();}
+                          }
+        </script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        
+        <style>
+            .food-munch-logo {
+    height: 80px;
+    width: 120px;
+}
+
+#navitem1 {
+    color: black;
+}
+
+#navitem2 {
+    color: black;
+}
+
+#navitem3 {
+    color: black;
+}
+
+#navitem4 {
+    color: black;
+}
+
+
+           body
+	{
+		background-image:url("https://image.freepik.com/free-vector/spot-light-background_1284-4685.jpg");
+		color:white;
+		background-size:cover;
+		background-attachment:fixed;
+	}
+	a{
+		color:white;
+                text-decoration: none;
+	}
+            	select
+	{
+		background-color:DarkOrange;
+		border-radius:40px;
+		height:20px;
+	}
+	h1
+	{
+		background-image: linear-gradient(to bottom right, red, yellow);
+		font-family:Microsoft YaHei;
+		height:50px;
+		font-size:40px;
+		color:black;
+		border-radius:30px;
+	}
+            td,th{
+                width:450px;
+                word-wrap: break-word;
+                height:40px;
+                font-size:23px;
+            }
+            table{
+                margin-left:75px;
+                margin-top:15px;
+            }
+            input:checked
+	{
+		width:20px;
+		height:20px;
+	}
+        
+        input[type=submit]
+        {
+            width:150px;
+            height:30px;
+            font-size:23px;
+        }
+        p{
+            background-color:brown;
+		border:2px solid black;
+		width:1225px;
+                padding-top:5px;
+                height:35px;
+		font-size:25px;
+                font-weight:bold;
+                padding-left:25px;
+                margin-left:25px;
+		border-radius:30px;
+		font-family:Microsoft YaHei;
+        }
+        #tables{
+        width:150px;
+	height:35px;
+	background-color:cyan;
+	float:right;
+	margin-right:50px;
+	font-size:20px;
+	outline:none;
+        }
+        span{
+            font-size: 23px;
+            margin-left:80px;
+            
+        }
+        textarea{
+            font-size:20px;
+            border:1px solid brown;
+            border-radius: 10px;
+            margin-left:290px;
+            margin-top:-20px;
+            
+        }
+        hr{
+            height:5px;
+            background:white;
+        }
+        #quick
+        {
+            margin-right:-80px;
+            margin-left:80px;
+        }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="KRACK.png" class="food-munch-logo" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-link active" href="wcu-section.html" id="navitem1">
+                            Why Choose Us
+                            <span class="sr-only">(current)</span>
+                        </a>
+                        <a class="nav-link" href="menu.html" id="navitem1">Explore Menu</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="cooking_login.html">For Chef's</a>
+                              
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="management_login.html">For Management</a>
+                            </div>
+                          </li>
+                        <a class="nav-link" href="FollowUs.html" id="navitem1">Follow Us</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <br><br><br><br><br><br>
+    <center><h1>M &nbsp;&nbsp;E &nbsp;&nbsp;N &nbsp;&nbsp;U &nbsp;&nbsp;🍽</h1></center>
+    <form action="menuintake.jsp" method="post">
+        <select name="table" id= "tables">
+            <option>table-1</option>
+            <option>table-2</option>
+            <option>table-3</option>
+            <option>table-4</option>
+            <option>table-5</option>
+        </select><br/><br/>
+        <p>Green Crackers</p>    
+    <table>
+            <tr>
+                <td>
+                    <input type="checkbox" value="Gobi Manchuria" name="food"/>
+                    <label>
+       <a href="javascript:poptastic('http://www.relishthebite.com/wp-content/uploads/2017/08/Gobi_Manchurian-3.jpg')" style="color:lightgreen" >Anaar - 90/-</a>
+                    </label>
+                    <select name="Gobi Manchuria">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Chakhri" name="food"/>
+                    <label><a href="javascript:poptastic('https://www.lordbyronskitchen.com/wp-content/uploads/2019/02/2-3-640x960.jpg')" style="color:red">Chakhri - 100/-</a></label>
+                    <select name="Ginger Chicken">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Rockets" name="food"/>
+                    <label><a href="javascript:poptastic('https://i2.wp.com/www.vegrecipesofindia.com/wp-content/uploads/2014/12/paneer-manchurian-recipe.jpg')" style="color:lightgreen">Rockets - 120/-</a></label>
+                    <select name="Paneer Manchuria">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+        
+            <tr>
+                <td>
+                    <input type="checkbox" value="snakeTabs" name="food"/>
+                    <label><a href="javascript:poptastic('https://www.recipetineats.com/wp-content/uploads/2016/07/Asian-Chilli-Garlic-Prawns-2_1.jpg')" style="color:red">snake tabs - 50/-</a></label>
+                    <select name="Chilli Prawns">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Phuljhadi" name="food"/>
+                    <label><a href="javascript:poptastic('https://i2.wp.com/www.vegrecipesofindia.com/wp-content/uploads/2018/03/paneer-popcorn-recipe.jpg')" style="color:lightgreen">Phuljadhi - 80/-</a></label>
+                    <select name="Paneer Popcorn">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="colourful matches" name="food"/>
+                    <label><a href="javascript:poptastic('https://www.whiskaffair.com/wp-content/uploads/2015/06/Spring-Roll-1.jpg')" style="color:lightgreen">colourful matches - 10/-</a></label>
+                    <select name="Spring Rolls">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" value="Mathabs" name="food"/>
+                    <label><a href="javascript:poptastic('https://punampaul.com/wp-content/uploads/2019/03/Chilli-Chicken.jpg')" style="color:red">Mathabs - 80/-</a></label>
+                    <select name="Chilli Chicken">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Twinkling stars" name="food"/>
+                    <label><a href="javascript:poptastic('https://img-global.cpcdn.com/recipes/aac313e78ca35f9f/751x532cq70/mangalorean-chicken-sukka-recipe-main-photo.jpg')" style="color:red">Twinkling stars - 60   /-</a></label>
+                    <select name="Chicken Sukka">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="shots" name="food"/>
+                    <label><a href="javascript:poptastic('https://maunikagowardhan.co.uk/wp-content/uploads/2011/11/Chilli-Paneer-1024x683.jpg')" style="color:lightgreen">shots - 300/-</a></label>
+                    <select name="Chilli Paneer">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+           
+                       
+    </table>
+        <p>MAIN COURSE</p>
+    <table>
+            <tr>
+                <td>
+                    <input type="checkbox" value="sutli bomb" name="food"/>
+                    <label><a href="javascript:poptastic('https://www.phoaulac.com/wp-content/uploads/2018/11/Steam-Rice.jpg')" style="color:lightgreen">Sutli bomb - 200/-</a></label>
+                    <select name="Steam Rice">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Laxmi bomb" name="food"/>
+                    <label><a href="javascript:poptastic('https://recipesofhome.com/wp-content/uploads/2020/06/chicken-biryani-recipe.jpg')" style="color:lightgreen">Laxmi bomb - 150/-</a></label>
+                    <select name="Chicken Biryani">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="100wala" name="food"/>
+                    <label><a href="javascript:poptastic('https://www.bestindiancooking.com/wp-content/uploads/bfi_thumb/malavedathybiriyani-1-nn5inqqs9um8lx01dzkpr0bnjpycmyxhnlaumgqi8k.jpg')" style="color:red">100wala- 100/-</a></label>
+                    <select name="Koftey Ki Biryani">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" value="1000wala" name="food"/>
+                    <label><a href="javascript:poptastic('https://hindi.boldsky.com/img/2014/09/06-fish-pulao.jpg')" style="color:red">1000wala - 200/-</a></label>
+                    <select name="Fish Pulav">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="5000wala" name="food"/>
+                    <label><a href="javascript:poptastic('https://d36v5spmfzyapc.cloudfront.net/wp-content/uploads/2018/07/Three-Layered-Rice-Recipe.jpg.webp')" style="color:lightgreen">5000wala- 350/-</a></label>
+                    <select name="Three Layer Rice">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="10000wala" name="food"/>
+                    <label><a href="javascript:poptastic('https://myfoodstory.com/wp-content/uploads/2018/07/Perfect-Jeera-Rice-Indian-Cumin-Rice-2.jpg?fit=1200,9999')" style="color:lightgreen">10000wala - 550/-</a></label>
+                    <select name="Jeera Rice">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" value="Mutton Keema" name="food"/>
+                    <label><a href="javascript:poptastic('https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Pooja_Thakur/Mutton_Keema_paav_1600.jpg')" style="color:red">Mutton Keema - 350/-</a></label>
+                    <select name="Mutton Keema">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Special Thali" name="food"/>
+                    <label><a href="javascript:poptastic('https://dhunii.com/wp-content/uploads/2017/01/special-thali.jpg')" style="color:lightgreen">Special Thali - 155/-</a></label>
+                    <select name="Special Thali">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Fried Beaf" name="food"/>
+                    <label><a href="https://myfavouritepastime.files.wordpress.com/2014/09/spicy-fried-beef-myfavouritepastime-com_4722.jpg" style="color:red">Fried Beaf - 305/-</a></label>
+                    <select name="Fried Beaf">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" value="Matka Biryani" name="food"/>
+                    <label><a href="https://b.zmtcdn.com/data/pictures/chains/3/19159713/108e577a33d29a56ed9bb75d7d50db4e.jpg?output-format=webp&fit=around|300:273&crop=300:273;*,*" style="color:lightgreen">Matka Biryani - 225/-</a></label>
+                    <select name="Matka Biryani">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Veg Pulao" name="food"/>
+                    <label><a href="https://yummytummyrecipes.com/wp-content/uploads/2020/07/Veg-Pulav.png" style="color:lightgreen">Veg Pulao - 120/-</a></label>
+                    <select name="Veg Pulao">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Prawns Biryani" name="food"/>
+                    <label><a href="https://www.kannammacooks.com/wp-content/uploads/prawn-biryani-eral-biriyani-recipe-19.jpg" style="color:red">Prawns Biryani - 300/-</a></label>
+                    <select name="Prawns Biryani">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>                 
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" value="Brown Basmathi Biryani" name="food"/>
+                    <label><a href="https://www.thespruceeats.com/thmb/sWwS-bknHW3m0ymoQVnZn8wEv08=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/brown-basmati-0905-13-57bb90e93df78c876339b17f.jpg" style="color:lightgreen">Brown Basmathi Biryani - 140/-</a></label>
+                    <select name="Brown Basmathi Biryani">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Hyderabadi Biryani" name="food"/>
+                    <label><a href="https://www.indianhealthyrecipes.com/wp-content/uploads/2019/02/hyderabadi-biryani.jpg" style="color:red">Hyderabadi Biryani - 250/-</a></label>
+                    <select name="Hyderabadi Biryani">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Palak Rice" name="food"/>
+                    <label><a href="https://www.indianveggiedelight.com/wp-content/uploads/2020/03/spinach-rice-1536x2048.jpg" style="color:lightgreen">Palak Rice - 150/-</a></label>
+                    <select name="Palak Rice">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>                 
+            </tr>            
+    </table>
+    <p>FRIZZLES</p>
+    <table>
+            <tr>
+                <td>
+                    <input type="checkbox" value="Herbed fries" name="food"/>
+                    <label>Herbed fries - 130/-</label>
+                    <select name="Herbed fries">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Cheese Fries" name="food"/>
+                    <label>Cheese Fries - 130/-</label>
+                    <select name="Cheese Fries">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Chicken Fries" name="food"/>
+                    <label>Chicken Fries - 200/-</label>
+                    <select name="Chicken Fries">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" value="Chipotle Mayo Fries" name="food"/>
+                    <label>Chipotle Mayo Fries - 250/-</label>
+                    <select name="Chipotle Mayo Fries">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Jalapengo Cheese Fries" name="food"/>
+                    <label>Jalapengo Cheese Fries - 150/-</label>
+                    <select name="Jalapengo Cheese Fries">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Sweet Chilli Fries" name="food"/>
+                    <label>Sweet Chilli Fries - 120/-</label>
+                    <select name="Sweet Chilli Fries">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" value="Kajun Chilli Fries" name="food"/>
+                    <label>Kajun Chilli Fries - 130/-</label>
+                    <select name="Kajun Chilli Fries">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Honey Mayo Fries" name="food"/>
+                    <label>Honey Mayo Fries - 125/-</label>
+                    <select name="Honey Mayo Fries">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Cajun Chilli" name="food"/>
+                    <label>Cajun Chilli - 150/-</label>
+                    <select name="Cajun Chilli">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+                        
+    </table>
+     <p>DESSERTS</p>    
+    <table>
+            <tr>
+                <td>
+                    <input type="checkbox" value="Margarita Cupcake" name="food"/>
+                    <label>Margarita Cupcake - 150/-</label>
+                    <select name="Margarita Cupcake">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Angel Cake" name="food"/>
+                    <label>Angel Cake - 400/-</label>
+                    <select name="Angel Cake">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Notso Fried Cream" name="food"/>
+                    <label>Notso Fried Cream - 240/-</label>
+                    <select name="Notso Fried Cream">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" value="Roasted Crumble" name="food"/>
+                    <label>Roasted Crumble - 205/-</label>
+                    <select name="Roasted Crumble">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Apple Pie" name="food"/>
+                    <label>Apple Pie - 150/-</label>
+                    <select name="Apple Pie">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Almond Cake" name="food"/>
+                    <label>Almond Cake - 190/-</label>
+                    <select name="Almond Cake">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" value="Maltesers Tiramisu" name="food"/>
+                    <label>Maltesers Tiramisu - 350/-</label>
+                    <select name="Maltesers Tiramisu">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Cinnamon Honey Cream" name="food"/>
+                    <label>Cinnamon Honey Cream - 255/-</label>
+                    <select name="Cinnamon Honey Cream">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Appleberry Crumble" name="food"/>
+                    <label>Appleberry Crumble - 325/-</label>
+                    <select name="Appleberry Crumble">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" value="Choc A Block" name="food"/>
+                    <label>Choc A Block - 225/-</label>
+                    <select name="Choc A Block">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Amaratteo Tart" name="food"/>
+                    <label>Amaratteo Tart - 150/-</label>
+                    <select name="Amaratteo Tart">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Apple Strudle" name="food"/>
+                    <label>Apple Strudle - 200/-</label>
+                    <select name="Apple Strudle">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>                 
+            </tr>                   
+    </table>
+    <p>MILK SHAKES</p>
+    <table>
+            <tr>
+                <td>
+                    <input type="checkbox" value="The Legend" name="food"/>
+                    <label>The Legend - 190/-</label>
+                    <select name="The Legend">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Ghostly Ghost" name="food"/>
+                    <label>Ghostly Ghost - 190/-</label>
+                    <select name="Ghostly Ghost">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Mandarin" name="food"/>
+                    <label>Mandarin - 180/-</label>
+                    <select name="Mandarin">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" value="Voodoo" name="food"/>
+                    <label>Voodoo - 140/-</label>
+                    <select name="Voodoo">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Cheesy" name="food"/>
+                    <label>Cheesy - 190/-</label>
+                    <select name="Cheesy">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="Berlicious" name="food"/>
+                    <label>Berlicious - 120/-</label>
+                    <select name="Berlicious">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" value="Snickers" name="food"/>
+                    <label>Snickers - 140/-</label>
+                    <select name="Snickers">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="M & M's" name="food"/>
+                    <label>M & M's - 125/-</label>
+                    <select name="M & M's">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="checkbox" value="The Count" name="food"/>
+                    <label>The Count - 180/-</label>
+                    <select name="The Count">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </td>
+            </tr>
+                        
+    </table>
+    <br/><br/>
+    <input type="radio" name="prior" id="quick" value="quick"/><span> Please tick the check box for Quick delivery(*charges will apply)</span>
+    <br><br>
+    <span>Add Your Description</span><br>
+    <textarea name="desc" rows="5" cols="30"></textarea>
+    <br><br><hr>
+    <center><input type="submit" value="Place Order"/></center><br/><br/>
+    </form>
+    </body>
+</html>
